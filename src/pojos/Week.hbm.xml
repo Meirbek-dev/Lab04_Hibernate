@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 17, 2020 12:29:09 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojos.Week" table="week" catalog="forecast" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="date" type="string">
+            <column name="date" length="15" not-null="true" />
+        </property>
+        <property name="day" type="string">
+            <column name="day" length="11" />
+        </property>
+        <property name="weather" type="string">
+            <column name="weather" length="45" />
+        </property>
+        <property name="temperature" type="string">
+            <column name="temperature" length="5" />
+        </property>
+    </class>
+</hibernate-mapping>
